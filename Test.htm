@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Алгоритм быстрой сортировки</title>
+	  <script src="scripts/script.js"></script>
+   </head>
+	
+   <body background = "images/wp.jpg" style="margin-top:200px;">
+      <H1 align="center"> Алгоритм быстрой сортировки</H1>
+	  <div id="first stage">
+	  <p align = "center"> <b> Введите колличество элементов, необходимых отсортировать (по умолчанию будет выбрано 10).<b></p>
+	  <p align = "center"> <b>Количество элементов должно быть от 10 до 30, иначе оно будет выбрано по умолчанию.<b></p>
+	  <table border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td><input type="number" id="Ninput"></td>
+		<td><input type="button" value="ok" onclick="initialize()"></td>
+	  </tr>
+	  </table>
+	  
+	  </div>
+	  <div  id="second stage" style="display: none;">
+	  <table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr id="maintable" align="center" valign="bottom">
+			
+		</tr>
+	  </table>
+	   <br><br>
+	  <table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<input id="quicksort">
+			</td>
+			<td>
+				<input id="repaint">
+			</td>
+			<td>
+				<input id="gosbs">
+			</td>
+		</tr>
+	  </table>	
+	  <table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<input id="Previous">
+			</td>
+			<td>
+				<input id="Next">
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="quit" onclick="finish()"> 
+			</td>	
+		</tr>
+		</table>
+		
+		
+		</div>
+		<div id="third stage" style="display: none;">
+		<H1 align="center"> Сортировка прошла успешно </H1>
+		<H1 align="center"> Аревуар! </H1>
+		<table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<input type="button" value="Reset" onclick="reset_function()"> 
+			</td>	
+			
+			<td>
+				<input type="button" value="Previous Page" onclick="return_from_last_page()"> 
+			</td>
+		</tr>
+		</table>
+		</div>
+		
+		
+   </body>
+	
+</html>
