@@ -56,7 +56,7 @@ for (i=0; i < temp;i++){
 for (i = 0; i < N; i++) { 
 	cols.push(document.createElement("td"));
 	stripes.push(document.createElement("img"));
-	stripes[i].setAttribute("src","images/redstrip.png");
+	stripes[i].setAttribute("src","images/blackstrip.png");
 	table.appendChild(cols[i]);
 	cols[i].appendChild(stripes[i]);
 	stripes[i].width=20;
@@ -70,7 +70,7 @@ sortbtn.onclick=function() {
 	arraytosort=initialarray.slice();
 	quickSort(arraytosort,stripes);
 	for (i = 0; i < N; i++) { 
-		stripes[i].src="images/redstrip.png";
+		stripes[i].src="images/blackstrip.png";
 	}
 	nextbtn.style.visibility="hidden";
 	prevbtn.style.visibility="hidden";
@@ -83,7 +83,7 @@ rpntbtn.onclick=function() {
 	console.log(stripes);
 	for (i = 0; i < N; i++) { 
 		stripes[i].height=initialarray[i];
-		stripes[i].src="images/redstrip.png";
+		stripes[i].src="images/blackstrip.png";
 	}
 	nextbtn.style.visibility="hidden";
 	prevbtn.style.visibility="hidden";
@@ -119,14 +119,14 @@ nextbtn.onclick=function() {
 	if (currentStep < (sortsteps.length) ) {
 		
 		if (currentStep>1) {
-			stripes[sortsteps[currentStep-1][N]].src="images/redstrip.png"
-			stripes[sortsteps[currentStep-1][N+1]].src="images/redstrip.png"
-			stripes[sortsteps[currentStep-1][N+2]].src="images/redstrip.png"
+			stripes[sortsteps[currentStep-1][N]].src="images/blackstrip.png"
+			stripes[sortsteps[currentStep-1][N+1]].src="images/blackstrip.png"
+			stripes[sortsteps[currentStep-1][N+2]].src="images/blackstrip.png"
 		}
 		
 		
-		stripes[sortsteps[currentStep][N]].src="images/blackstrip.png"
-		stripes[sortsteps[currentStep][N+1]].src="images/blackstrip.png"
+		stripes[sortsteps[currentStep][N]].src="images/redstrip.png"
+		stripes[sortsteps[currentStep][N+1]].src="images/redstrip.png"
 		stripes[sortsteps[currentStep][N+2]].src="images/yellowstrip.png"
 		
 		for (i = 0; i < N; i++) { 
@@ -137,7 +137,7 @@ nextbtn.onclick=function() {
 		currentstep = sortsteps.length;
 		for (i = 0; i < N; i++) { 
 			stripes[i].height=arraytosort[i];
-			stripes[i].src="images/redstrip.png";
+			stripes[i].src="images/blackstrip.png";
 		}
 	}
 }
@@ -157,13 +157,13 @@ prevbtn.onclick=function() {
 	if (currentStep > 0 ) {
 		
 		if (currentStep < sortsteps.length-1) {
-			stripes[sortsteps[currentStep+1][N]].src="images/redstrip.png"
-			stripes[sortsteps[currentStep+1][N+1]].src="images/redstrip.png"
-			stripes[sortsteps[currentStep+1][N+2]].src="images/redstrip.png"
+			stripes[sortsteps[currentStep+1][N]].src="images/blackstrip.png"
+			stripes[sortsteps[currentStep+1][N+1]].src="images/blackstrip.png"
+			stripes[sortsteps[currentStep+1][N+2]].src="images/blackstrip.png"
 		}
 		
-		stripes[sortsteps[currentStep][N]].src="images/blackstrip.png"
-		stripes[sortsteps[currentStep][N+1]].src="images/blackstrip.png"
+		stripes[sortsteps[currentStep][N]].src="images/redstrip.png"
+		stripes[sortsteps[currentStep][N+1]].src="images/redstrip.png"
 		stripes[sortsteps[currentStep][N+2]].src="images/yellowstrip.png"
 		
 		for (i = 0; i < N; i++) { 
@@ -174,7 +174,7 @@ prevbtn.onclick=function() {
 		currentstep = 0;
 		for (i = 0; i < N; i++) { 
 			stripes[i].height=initialarray[i];
-			stripes[i].src="images/redstrip.png";
+			stripes[i].src="images/blackstrip.png";
 		}
 	}
 }
